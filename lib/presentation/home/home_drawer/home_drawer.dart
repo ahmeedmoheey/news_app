@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/app_styles.dart';
 import '../../../core/colors_manager.dart';
@@ -24,7 +24,7 @@ class HomeDrawer extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             width: double.infinity,
-            height: 110,
+            height: 110.h,
             color: ColorsManager.green,
             child: Text(
               StringsManager.drawerTitle,
@@ -43,7 +43,7 @@ class HomeDrawer extends StatelessWidget {
                     children: [
                       Icon(Icons.list),
                       SizedBox(
-                        width: 8,
+                        width: 8.w,
                       ),
                       Text(
                         StringsManager.categeories,
@@ -52,7 +52,7 @@ class HomeDrawer extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 12,),
+                SizedBox(height: 12.h,),
                 InkWell(
                   onTap: () {
                     onMenuItemClicked(MenuItem.settings);
@@ -61,7 +61,7 @@ class HomeDrawer extends StatelessWidget {
                     children: [
                       Icon(Icons.settings),
                       SizedBox(
-                        width: 8,
+                        width: 8.w,
                       ),
                       Text(
                         StringsManager.settings,

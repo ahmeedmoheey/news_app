@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/data/api/model/sources_response/source.dart';
 import 'package:news_app/presentation/tabs/categories/categories_details/widgets/sources_tab_widget/source_item_widget.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../articles_list_widget/article_list_widget.dart';
+
 class SourcesTabWidget extends StatefulWidget {
   SourcesTabWidget({super.key, required this.sources});
 
@@ -43,7 +44,7 @@ class _SourcesTabWidgetState extends State<SourcesTabWidget> {
               )
                   .toList()),
         ),
-        ArticleListWidget(
+        ArticlesListWidget(
           source: widget.sources[tappedIndex],
         )
       ],

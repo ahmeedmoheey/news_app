@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
-import 'package:news_app/presentation/tabs/categories/categories_details/categories_details.dart';
 
 import '../../core/assets_manager.dart';
 import '../../core/colors_manager.dart';
-import '../../data_model/category_dm.dart';
+import '../../data_model/category_DM.dart';
 import '../tabs/categories/categories.dart';
+import '../tabs/categories/categories_details/categories_details.dart';
 import '../tabs/settings/settings.dart';
 import 'home_drawer/home_drawer.dart';
 
@@ -29,8 +28,7 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             title:  Text(appBarTitle),
           ),
-          drawer:
-          HomeDrawer(
+          drawer: HomeDrawer(
             onMenuItemClicked: onDrawerItemClick,
           ),
           body: selectedWidget),
@@ -38,7 +36,7 @@ class _HomeState extends State<Home> {
   }
 
   void onCategoryClicked(CategoryDM categoryDM){
-    selectedWidget = CategoryDetails(categoryDM: categoryDM);
+    selectedWidget = CategoryDetails(categoryDM: categoryDM,);
     appBarTitle = categoryDM.title;
     setState(() {
 
@@ -48,7 +46,7 @@ class _HomeState extends State<Home> {
   void onDrawerItemClick(MenuItem item) {
     Navigator.pop(context);
     if (item == MenuItem.categories) {
-      selectedWidget = Categories(onCategoryClicked: onCategoryClicked,);
+      selectedWidget = Categories(onCategoryClicked:onCategoryClicked );
     } else if (item == MenuItem.settings) {
       selectedWidget = Settings();
     }

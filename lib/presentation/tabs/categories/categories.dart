@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_app/presentation/tabs/categories/category_widget/category_widget.dart';
 
 import '../../../core/app_styles.dart';
-import '../../../data_model/category_dm.dart';
-import 'category_widget/category_widget.dart';
-
+import '../../../data_model/category_DM.dart';
 typedef OnCategoryClicked = void Function(CategoryDM);
 class Categories extends StatelessWidget {
   Categories({super.key, required this.onCategoryClicked});
@@ -14,13 +15,12 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: REdgeInsets.all(12),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Pick your category\nof interest',
-            style: AppStyles.homeCategory,
+            style: AppStyles.pickCategory,
           ),
           Expanded(
             child: GridView.builder(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/app_styles.dart';
-import 'package:news_app/core/colors_manager.dart';
-import 'package:news_app/data/api/model/sources_response/source.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app/data/api/model/sources_response/source.dart';
+
+import '../../../../../../core/app_styles.dart';
+import '../../../../../../core/colors_manager.dart';
 
 class SourceItemWidget extends StatelessWidget {
   SourceItemWidget({super.key, required this.source, required this.isSelected});

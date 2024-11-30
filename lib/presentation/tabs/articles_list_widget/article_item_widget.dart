@@ -1,9 +1,12 @@
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/core/app_styles.dart';
-import 'package:news_app/data/api/model/articles_response/articles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app/data/api/model/articles_response/articles.dart';
 
+import '../../../core/app_styles.dart';
+import 'details_screen.dart';
 
 class ArticleItemWidget extends StatelessWidget {
   ArticleItemWidget({super.key, required this.article});
@@ -14,13 +17,11 @@ class ArticleItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ArticleDetailsScreen(article: article),
-        //   ),
-        // );
-      },
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+            builder: (context) => ArticleDetailsScreen(article: article,))
+        );},
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

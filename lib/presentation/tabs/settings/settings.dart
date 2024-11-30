@@ -14,7 +14,7 @@ class Settings extends StatelessWidget {
         child: Column(
           children: 
           [
-            Text(StringsManager.language,style: AppStyles.language,),
+            Text(StringsManager.language,),
             SizedBox(height: 18,),
             Container(
               padding: EdgeInsets.all(16),
@@ -26,7 +26,7 @@ class Settings extends StatelessWidget {
                 borderRadius: BorderRadius.circular(1),
                   border: Border.all(color: Colors.green,width: 1)
               ),
-              child: Text(StringsManager.english,style: AppStyles.english,),
+              child: Text(StringsManager.english,),
             )
           ],
         ),

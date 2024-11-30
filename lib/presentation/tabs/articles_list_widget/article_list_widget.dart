@@ -1,20 +1,21 @@
+
 import 'package:flutter/material.dart';
 import 'package:news_app/data/api/model/sources_response/source.dart';
-import 'package:news_app/presentation/tabs/articles_list_widget/article_viewModel.dart';
 import 'package:provider/provider.dart';
 
 import 'article_item_widget.dart';
+import 'article_viewModel.dart';
 
-class ArticleListWidget extends StatefulWidget {
-  ArticleListWidget({super.key, required this.source});
+class ArticlesListWidget extends StatefulWidget {
+  ArticlesListWidget({super.key, required this.source});
 
   Source source;
 
   @override
-  State<ArticleListWidget> createState() => _ArticleListWidgetState();
+  State<ArticlesListWidget> createState() => _ArticlesListWidgetState();
 }
 
-class _ArticleListWidgetState extends State<ArticleListWidget> {
+class _ArticlesListWidgetState extends State<ArticlesListWidget> {
   var viewModel = ArticlesViewModel();
 
   @override
@@ -25,7 +26,7 @@ class _ArticleListWidgetState extends State<ArticleListWidget> {
   }
 
   @override
-  void didUpdateWidget(covariant ArticleListWidget oldWidget) {
+  void didUpdateWidget(covariant ArticlesListWidget oldWidget) {
     // TODO: implement didUpdateWidget
     super.didUpdateWidget(oldWidget);
     viewModel.getNewsBySourceId(widget.source.id ?? '');
@@ -58,3 +59,7 @@ class _ArticleListWidgetState extends State<ArticleListWidget> {
     );
   }
 }
+// observer
+// singleton
+// factory
+// builder

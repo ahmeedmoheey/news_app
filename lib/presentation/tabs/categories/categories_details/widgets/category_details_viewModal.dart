@@ -3,7 +3,6 @@ import 'package:news_app/data/api/api_manager/api_manager.dart';
 import 'package:news_app/data/api/model/sources_response/source.dart';
 
 class CategoryDetailsViewModel extends ChangeNotifier {
-
   List<Source>? sources;
 
   String? errorMessage; // ??
