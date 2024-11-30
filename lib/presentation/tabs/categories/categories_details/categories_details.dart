@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/data_model/category_DM.dart';
 import 'package:news_app/presentation/tabs/categories/categories_details/widgets/category_details_viewModal.dart';
 import 'package:news_app/presentation/tabs/categories/categories_details/widgets/sources_tab_widget/sources_tab_widget.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../data_model/category_DM.dart';
 
 class CategoryDetails extends StatefulWidget {
   CategoryDetails({super.key, required this.categoryDM});

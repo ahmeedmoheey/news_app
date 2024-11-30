@@ -1,11 +1,13 @@
+
 import 'package:flutter/material.dart';
+import 'package:news_app/presentation/tabs/categories/categories_details/categories_details.dart';
 
 import '../../core/assets_manager.dart';
 import '../../core/colors_manager.dart';
 import '../../data_model/category_DM.dart';
 import '../tabs/categories/categories.dart';
-import '../tabs/categories/categories_details/categories_details.dart';
 import '../tabs/settings/settings.dart';
+import 'article_search_delegate.dart';
 import 'home_drawer/home_drawer.dart';
 
 class Home extends StatefulWidget {
@@ -25,7 +27,20 @@ class _HomeState extends State<Home> {
           color: ColorsManager.white,
           image: DecorationImage(image: AssetImage(AssetsManager.pattern))),
       child: Scaffold(
+
           appBar: AppBar(
+            actions: [
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {
+                  showSearch(
+                    context: context,
+                    delegate: NewsSearchDelegate(
+                    ),
+                  );
+                },
+              ),
+            ],
             title:  Text(appBarTitle),
           ),
           drawer: HomeDrawer(
@@ -46,7 +61,7 @@ class _HomeState extends State<Home> {
   void onDrawerItemClick(MenuItem item) {
     Navigator.pop(context);
     if (item == MenuItem.categories) {
-      selectedWidget = Categories(onCategoryClicked:onCategoryClicked );
+      selectedWidget = Categories(onCategoryClicked: onCategoryClicked,);
     } else if (item == MenuItem.settings) {
       selectedWidget = Settings();
     }

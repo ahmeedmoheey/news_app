@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
-import 'package:news_app/data/api/model/sources_response/source.dart';
 import 'package:provider/provider.dart';
 
+import '../../../data/api/model/sources_response/source.dart';
 import 'article_item_widget.dart';
 import 'article_viewModel.dart';
 
@@ -59,7 +58,3 @@ class _ArticlesListWidgetState extends State<ArticlesListWidget> {
     );
   }
 }
-// observer
-// singleton
-// factory
-// builder

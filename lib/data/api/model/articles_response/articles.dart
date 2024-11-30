@@ -1,4 +1,4 @@
-import 'source.dart';
+import '../sources_response/source.dart';
 
 class Article {
   Source? source;
